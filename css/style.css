@@ -1,0 +1,105 @@
+:root {
+    --color-primario: #0f4c81;       /* Azul tecnológico */
+    --color-secundario: #2a9d8f;     /* Verde ahorro / energía */
+    --color-fondo: #f8f9fa;          /* Gris muy claro para el body */
+    --color-texto: #333333;          /* Gris oscuro para lectura cómoda */
+    --color-blanco: #ffffff;
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+
+.encabezado {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.encabezado h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.encabezado p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: var(--color-secundario);
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+@media (max-width: 768px) {
+    .encabezado h1 {
+        font-size: 2rem;
+    }
+
+    .menu {
+        gap: 1rem;
+    }
+
+    main {
+        padding: 0 0.5rem;
+    }
+}
+
+/* Para teléfonos móviles (máximo 480px) */
+@media (max-width: 480px) {
+    .encabezado {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .encabezado h1 {
+        font-size: 1.6rem;
+    }
+
+    .encabezado p {
+        font-size: 1rem;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .menu a {
+        display: block;
+        padding: 0.4rem;
+    }
+}
